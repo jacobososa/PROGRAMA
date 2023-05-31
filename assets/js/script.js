@@ -64,3 +64,30 @@ function tipoTriangulo() {
     console.log("El triangulo es escaleno");
   }
 }
+
+function sumaDivisores(numero) {
+  let suma_divisores = 0;
+  for (let i = 1; i <= numero / 2; i++) {
+    if (numero % i === 0) {
+      suma_divisores += i;
+    }
+  }
+  return suma_divisores;
+}
+
+function numerosAmigos() {
+  const numero1 = prompt("digite el primer numero");
+  const numero2 = prompt("digite el segundo numero");
+  const suma_divisores1 = sumaDivisores(numero1);
+  const suma_divisores2 = sumaDivisores(numero2);
+
+  if (
+    suma_divisores1 === numero2 &&
+    suma_divisores2 === numero1 &&
+    numero1 !== numero2
+  ) {
+    console.log(numero1 + " y " + numero2 + " son números amigos.");
+  } else {
+    console.log(numero1 + " y " + numero2 + " no son números amigos.");
+  }
+}
