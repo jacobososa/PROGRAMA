@@ -147,3 +147,91 @@ function calcularNotaFinal() {
     console.log("El estudiante perdió", notaFinal);
   }
 }
+
+let veces_ejecutado = 0;
+let continuar = "si";
+let ejercicioUno = 0;
+let ejercicioDos = 0;
+let ejercicioTres = 0;
+let ejercicioCuatro = 0;
+let ejercicioCinco = 0;
+let ejercicioSeis = 0;
+
+function ejercicioMasVecesEjecutados() {
+  let variableNames = [
+    ejercicioUno,
+    ejercicioDos,
+    ejercicioTres,
+    ejercicioCuatro,
+    ejercicioCinco,
+    ejercicioSeis,
+  ];
+  let maxVariable = "";
+  let minVariable = "";
+  let maxValor = 0;
+  let minValor = 0;
+
+  for (var i = 1; i < variableNames.length; i++) {
+    var variable = variableNames[i];
+
+    if (variableNames[variable] > maxValor) {
+      maxValor = variableNames[variable];
+      maxVariable = variable;
+    }
+
+    if (variableNames[variable] < minValor) {
+      minValor = variableNames[variable];
+      minVariable = variable;
+    }
+  }
+
+  console.log(maxVariable, "mas veces ejecutado: ", maxValor);
+  console.log(minVariable, "menos veces ejecutado: ", minValor);
+}
+
+while (continuar == "si") {
+  let opcion = Number(
+    prompt(
+      "elija una opcion\n1-ordenar numeros\n2-calcular el area de una circunferencia\n3-mostrar que tipo de triangulo es\n4-algoritmo de numeros amigos\n5-algoritmo valor de compra\n6-Notas de estudiante\n7-Cancelar"
+    )
+  );
+
+  switch (opcion) {
+    case 1:
+      ordenarNumeros();
+      ejercicioUno++;
+      break;
+    case 2:
+      circunFerencia();
+      ejercicioDos++;
+      break;
+    case 3:
+      tipoTriangulo();
+      ejercicioTres++;
+      break;
+    case 4:
+      numerosAmigos();
+      ejercicioCuatro++;
+      break;
+    case 5:
+      compra();
+      ejercicioCinco++;
+      break;
+    case 6:
+      calcularNotaFinal();
+      ejercicioSeis++;
+      break;
+    case 7:
+      continuar = "no";
+      console.log("total ejercicios ejecutados", veces_ejecutado);
+      console.log("Ejercicio 1 se ejecuto", ejercicioUno, "veces");
+      console.log("Ejercicio 2 se ejecuto", ejercicioDos, "veces");
+      console.log("Ejercicio 3 se ejecuto", ejercicioTres, "veces");
+      console.log("Ejercicio 4 se ejecuto", ejercicioCuatro, "veces");
+      console.log("Ejercicio 5 se ejecuto", ejercicioCinco, "veces");
+      console.log("Ejercicio 6 se ejecuto", ejercicioSeis, "veces");
+      ejercicioMasVecesEjecutados();
+      break;
+  }
+  veces_ejecutado++;
+}
