@@ -109,3 +109,41 @@ function compra() {
     console.log("se le hizo un desceunto del 10%: ", descuentoDiezPorciento);
   }
 }
+
+function calcularNotaFinal() {
+  let notaUno = prompt("Digite la nota 1");
+  if (notaUno > 5) {
+    console.log("nota uno No valida");
+    return;
+  }
+  let notaDos = prompt("Digite la nota 2");
+  if (notaDos > 5) {
+    console.log("nota dos No valida");
+    return;
+  }
+  let notaTres = prompt("Digite la nota 3");
+  if (notaTres > 5) {
+    console.log("nota tres No valida");
+    return;
+  }
+  let notaCuatro = prompt("Digite la nota 4");
+  if (notaCuatro > 5) {
+    console.log("nota cuatro No valida");
+    return;
+  }
+
+  if (notaCuatro === 5) {
+    notaUno += 1;
+    notaDos += 1;
+    notaTres += 1;
+  }
+
+  const notaFinal =
+    notaUno * 0.1 + notaDos * 0.2 + notaTres * 0.3 + notaCuatro * 0.4;
+
+  if (notaFinal > 3.5) {
+    console.log("El estudiante ganó", notaFinal);
+  } else {
+    console.log("El estudiante perdió", notaFinal);
+  }
+}
