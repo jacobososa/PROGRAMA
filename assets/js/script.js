@@ -51,3 +51,16 @@ function circunFerencia() {
 
   console.log("el area de la circunferencia es: ", area);
 }
+
+function tipoTriangulo() {
+  let ladoA = prompt("ingresar el lado A");
+  let ladoB = prompt("ingresar el lado A");
+  let ladoC = prompt("ingresar el lado A");
+  if (ladoA == ladoB && ladoB == ladoC) {
+    console.log("El triangulo es equilátero");
+  } else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC) {
+    console.log("El triangulo es isósceles");
+  } else {
+    console.log("El triangulo es escaleno");
+  }
+}
