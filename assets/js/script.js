@@ -91,3 +91,21 @@ function numerosAmigos() {
     console.log(numero1 + " y " + numero2 + " no son números amigos.");
   }
 }
+
+function compra() {
+  const valorCompra = prompt("ingrese el valor de la compra");
+  const cantidad = prompt("ingrese la cantidad");
+  let totalCompra = valorCompra * cantidad;
+  console.log("el total de la compra es", totalCompra);
+
+  const iva = totalCompra * 0.19;
+  console.log("el total del iva es: ", iva);
+
+  if (totalCompra > 500000) {
+    console.log("se le obsequia el valor del iva en total es: ", totalCompra);
+  }
+  if (totalCompra > 1000000) {
+    let descuentoDiezPorciento = totalCompra * 0.1;
+    console.log("se le hizo un desceunto del 10%: ", descuentoDiezPorciento);
+  }
+}
