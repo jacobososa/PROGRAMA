@@ -1,0 +1,6 @@
+{
+    "liveServer.settings.port": 5501,
+    "CodeGPT.query.language": "Spanish",
+    "CodeGPT.model": "text-davinci-003",
+    "CodeGPT.maxTokens": 500
+}
