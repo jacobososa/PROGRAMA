@@ -41,3 +41,13 @@ function ordenarNumeros() {
       console.log("el orden es mayor a menor: ", numTres, numDos, numUno);
     }
 }
+
+function circunFerencia() {
+  const pi = 3.1416;
+  let radio = parseFloat(prompt("digite el radio "));
+  let area;
+
+  area = pi * radio * radio;
+
+  console.log("el area de la circunferencia es: ", area);
+}
